@@ -39,11 +39,9 @@ const ArticlePage = () => {
               Voltar ao blog
             </Link>
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-                <span className="font-display text-primary-foreground text-lg leading-none">F</span>
-              </div>
+              <img src={foxLogo} alt="Focus Tech" className="w-9 h-9 object-contain" />
               <span className="font-display text-xl tracking-wider text-foreground hidden sm:inline">
-                FOCUS <span className="text-primary">TECNOLOGIA</span>
+                FOCUS <span className="text-primary">TECH BLOG</span>
               </span>
             </div>
           </div>
