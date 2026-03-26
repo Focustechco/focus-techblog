@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Clock, User, Tag, Calendar } from "lucide-react";
 import { articles } from "@/data/articles";
 import Starfield from "@/components/Starfield";
+import foxLogo from "@/assets/fox-logo.png";
 
 const ArticlePage = () => {
   const { id } = useParams();
