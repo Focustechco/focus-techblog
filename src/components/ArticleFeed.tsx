@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Article } from "@/data/articles";
 
 interface ArticleFeedProps {
@@ -8,9 +9,10 @@ const ArticleFeed = ({ articles }: ArticleFeedProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {articles.map((article, idx) => (
-        <article
+        <Link
+          to={`/artigo/${article.id}`}
           key={article.id}
-          className="group relative bg-card border border-border rounded-lg p-5 transition-all duration-300 hover:border-primary hover:glow-orange cursor-pointer hover:-translate-y-1"
+          className="group relative bg-card border border-border rounded-lg p-5 transition-all duration-300 hover:border-primary hover:glow-orange cursor-pointer hover:-translate-y-1 block"
         >
           <div className="flex items-start justify-between mb-3">
             <span className="font-mono-code text-xs text-primary opacity-60">
@@ -27,7 +29,7 @@ const ArticleFeed = ({ articles }: ArticleFeedProps) => {
             {article.excerpt}
           </p>
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/0 group-hover:via-primary to-transparent transition-all duration-500" />
-        </article>
+        </Link>
       ))}
     </div>
   );
