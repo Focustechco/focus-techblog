@@ -19,11 +19,9 @@ const Navbar = ({ activeCategory, onCategoryChange }: NavbarProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2 shrink-0">
-            <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-              <span className="font-display text-primary-foreground text-lg leading-none">F</span>
-            </div>
+            <img src={foxLogo} alt="Focus Tech" className="w-9 h-9 object-contain" />
             <span className="font-display text-xl tracking-wider text-foreground">
-              FOCUS <span className="text-primary">TECNOLOGIA</span>
+              FOCUS <span className="text-primary">TECH BLOG</span>
             </span>
           </div>
 
