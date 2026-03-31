@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -63,7 +64,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden rounded-lg border border-border bg-card group cursor-pointer">
+    <Link to="/artigo/1" className="block relative overflow-hidden rounded-lg border border-border bg-card group cursor-pointer">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
       <div className="relative z-10 p-8 md:p-12 flex flex-col justify-end min-h-[320px]">
         <div className="flex items-center gap-2 mb-4">
@@ -79,13 +80,12 @@ const HeroSection = () => {
           Descubra como a Focus Tecnologia está utilizando inteligência artificial para criar
           pontes de comunicação acessíveis e inclusivas através do projeto Conlibras.
         </p>
-        <button className="self-start px-6 py-2.5 bg-primary text-primary-foreground font-body font-semibold rounded transition-all hover:glow-orange-strong hover:scale-105 duration-300">
+        <span className="self-start px-6 py-2.5 bg-primary text-primary-foreground font-body font-semibold rounded transition-all hover:glow-orange-strong hover:scale-105 duration-300">
           Ler mais →
-        </button>
+        </span>
       </div>
-      {/* Hover overlay */}
       <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-    </div>
+    </Link>
   );
 };
 
