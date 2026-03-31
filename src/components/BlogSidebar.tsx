@@ -10,10 +10,10 @@ const trendingTopics = [
 ];
 
 const authors = [
-  { name: "Lucas Ferreira", role: "CTO" },
-  { name: "Ana Costa", role: "Dev Lead" },
-  { name: "Pedro Santos", role: "AI Researcher" },
-  { name: "Maria Oliveira", role: "UX Designer" },
+  { name: "Adriano Leal", role: "CTO" },
+  { name: "Gabriel Sbrana", role: "Dev Lead" },
+  { name: "Maria Esther", role: "AI Researcher" },
+  { name: "Marcelo Rezende", role: "UX Designer" },
 ];
 
 const BlogSidebar = () => {
