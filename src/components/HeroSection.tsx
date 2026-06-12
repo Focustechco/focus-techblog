@@ -1,90 +1,54 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight, Clock } from "lucide-react";
+import { articles } from "@/data/articles";
 
 const HeroSection = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    let animId: number;
-
-    const resize = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    };
-    resize();
-    window.addEventListener("resize", resize);
-
-    let time = 0;
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time += 0.01;
-
-      // Animated grid
-      ctx.strokeStyle = "rgba(255,107,0,0.08)";
-      ctx.lineWidth = 1;
-      const spacing = 40;
-      const offset = (time * 10) % spacing;
-
-      for (let x = -spacing + offset; x < canvas.width + spacing; x += spacing) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-      for (let y = -spacing + offset; y < canvas.height + spacing; y += spacing) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      // Glowing particles
-      for (let i = 0; i < 8; i++) {
-        const px = (Math.sin(time + i * 1.5) * 0.4 + 0.5) * canvas.width;
-        const py = (Math.cos(time * 0.7 + i * 2) * 0.4 + 0.5) * canvas.height;
-        const grad = ctx.createRadialGradient(px, py, 0, px, py, 20);
-        grad.addColorStop(0, "rgba(255,107,0,0.4)");
-        grad.addColorStop(1, "transparent");
-        ctx.fillStyle = grad;
-        ctx.fillRect(px - 20, py - 20, 40, 40);
-      }
-
-      animId = requestAnimationFrame(animate);
-    };
-    animate();
-
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
+  const featured = articles[0];
 
   return (
-    <Link to="/artigo/1" className="block relative overflow-hidden rounded-lg border border-border bg-card group cursor-pointer">
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
-      <div className="relative z-10 p-8 md:p-12 flex flex-col justify-end min-h-[320px]">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="px-2 py-0.5 bg-primary/20 text-primary font-mono-code text-xs rounded border border-primary/30">
-            DESTAQUE
+    <Link
+      to={`/artigo/${featured.id}`}
+      className="group relative block overflow-hidden rounded-2xl border border-border bg-card shadow-elevated"
+    >
+      <div className="grid lg:grid-cols-2 min-h-[460px]">
+        {/* Left content */}
+        <div className="relative z-10 p-8 md:p-12 lg:p-14 flex flex-col justify-center order-2 lg:order-1">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="px-3 py-1 bg-primary text-primary-foreground font-body font-semibold text-[11px] tracking-wider uppercase rounded-full">
+              Destaque
+            </span>
+            <span className="flex items-center gap-1.5 text-xs text-muted-foreground font-body">
+              <Clock size={12} /> {featured.readTime} de leitura
+            </span>
+            <span className="text-xs text-muted-foreground font-body">• {featured.category}</span>
+          </div>
+
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.05] mb-5 text-balance">
+            {featured.title}
+          </h1>
+
+          <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
+            {featured.excerpt}
+          </p>
+
+          <span className="inline-flex items-center gap-2 self-start px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-full transition-all duration-300 group-hover:shadow-glow group-hover:gap-3">
+            Ler artigo completo
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
           </span>
-          <span className="font-mono-code text-xs text-muted-foreground">IA • 5 min leitura</span>
         </div>
-        <h2 className="font-display text-3xl md:text-5xl text-foreground leading-tight mb-3 group-hover:text-glow-orange transition-all">
-          CONLIBRAS: COMO A IA ESTÁ REVOLUCIONANDO A COMUNICAÇÃO EM LIBRAS
-        </h2>
-        <p className="font-body text-muted-foreground text-base md:text-lg max-w-2xl mb-6">
-          Descubra como a Focus Tecnologia está utilizando inteligência artificial para criar
-          pontes de comunicação acessíveis e inclusivas através do projeto Conlibras.
-        </p>
-        <span className="self-start px-6 py-2.5 bg-primary text-primary-foreground font-body font-semibold rounded transition-all hover:glow-orange-strong hover:scale-105 duration-300">
-          Ler mais →
-        </span>
+
+        {/* Right image */}
+        <div className="relative order-1 lg:order-2 min-h-[260px] lg:min-h-0 overflow-hidden">
+          <img
+            src={featured.image}
+            alt={featured.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-card via-card/40 to-transparent lg:bg-gradient-to-r lg:from-card lg:via-transparent lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent lg:hidden" />
+        </div>
       </div>
-      <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
     </Link>
   );
 };
