@@ -13,7 +13,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: 1,
-    title: "ConLibras: Inovação em Acessibilidade Digital",
+    title: "ConLibras: Inovação em Acessibilidade digital",
     category: "Acessibilidade",
     excerpt: "Plataforma de teleatendimento em Libras desenvolvida pela Focus que conecta pessoas surdas a intérpretes especializados, promovendo inclusão, acessibilidade e comunicação eficiente em instituições públicas e  empresas privadas.",
     author: "Adriano Leal",
