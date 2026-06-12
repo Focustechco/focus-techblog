@@ -42,7 +42,7 @@ const HeroSection = () => {
           <img
             src={featured.image}
             alt={featured.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-contain object-center transition-transform duration-[1200ms] group-hover:scale-105"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-card via-card/40 to-transparent lg:bg-gradient-to-r lg:from-card lg:via-transparent lg:to-transparent" />

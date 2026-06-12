@@ -19,7 +19,7 @@ export const articles: Article[] = [
     author: "Adriano Leal",
     date: "12 Jun 2026",
     readTime: "9 min",
-    image: "/__l5e/assets-v1/f025c75d-000d-4eac-87d2-8afa30b56330/conlibras-hero.png",
+    image: "/__l5e/assets-v1/63ce598d-737e-4a25-9da5-03a4e6ab324f/conlibras-hero.png",
     content: [
       "A comunicação é um direito humano fundamental. No entanto, milhões de brasileiros surdos enfrentam diariamente barreiras invisíveis ao tentar acessar serviços essenciais — do atendimento médico ao banco, da escola ao órgão público. Quando a comunicação falha, falham também a inclusão, a dignidade e a cidadania. É nesse cenário que nasce o ConLibras, plataforma de teleatendimento em Libras desenvolvida pela Focus Tecnologia para transformar a forma como instituições se comunicam com a comunidade surda.",
       "O desafio da acessibilidade na comunicação. Segundo dados do IBGE, mais de 10 milhões de brasileiros possuem algum grau de deficiência auditiva. Apesar da legislação brasileira reconhecer a Libras como meio legal de comunicação desde 2002, a realidade ainda é marcada por atendimentos improvisados, dependência de intérpretes presenciais, custos operacionais elevados, indisponibilidade imediata e limitações geográficas — especialmente em municípios menores. O resultado é um cenário em que pessoas surdas frequentemente precisam adiar consultas, abrir mão de serviços ou depender de familiares para tarefas simples do dia a dia.",
