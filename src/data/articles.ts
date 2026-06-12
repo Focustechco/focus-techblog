@@ -13,9 +13,9 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: 1,
-    title: "ConLibras: Aplicativo desenvolvido pela Focus está revolucionando a comunicação em Libras",
+    title: "ConLibras: Inovação em Acessibilidade Digital",
     category: "Acessibilidade",
-    excerpt: "Plataforma de teleatendimento em Libras que aproxima a comunicação entre pessoas surdas e intérpretes, promovendo acessibilidade em instituições públicas e organizações privadas.",
+    excerpt: " Plataforma de teleatendimento em Libras desenvolvida pela focus que conecta pessoas surdas a intérpretes especializados, promovendo inclusão, acessibilidade e comunicação eficiente em instituições públicas e empresas privadas. ",
     author: "Adriano Leal",
     date: "12 Jun 2026",
     readTime: "9 min",
