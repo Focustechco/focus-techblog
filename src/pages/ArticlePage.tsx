@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Clock, User, Tag, Calendar } from "lucide-react";
+import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import { articles } from "@/data/articles";
-import Starfield from "@/components/Starfield";
 import foxLogo from "@/assets/fox-logo.png";
 
 const ArticlePage = () => {
@@ -10,11 +9,9 @@ const ArticlePage = () => {
 
   if (!article) {
     return (
-      <div className="min-h-screen flex items-center justify-center relative">
-        <Starfield />
-        <div className="scanlines" />
-        <div className="relative z-10 text-center">
-          <h1 className="font-display text-4xl text-foreground mb-4">ARTIGO NÃO ENCONTRADO</h1>
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <h1 className="font-display text-4xl text-foreground mb-4">Artigo não encontrado</h1>
           <Link to="/" className="text-primary font-body hover:underline">← Voltar ao blog</Link>
         </div>
       </div>
@@ -26,74 +23,74 @@ const ArticlePage = () => {
   const nextArticle = articles[articleIndex + 1];
 
   return (
-    <div className="min-h-screen relative">
-      <Starfield />
-      <div className="scanlines" />
+    <div className="min-h-screen relative bg-background">
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute -top-40 -right-32 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[140px]" />
+      </div>
 
       <div className="relative z-10">
         {/* Top bar */}
-        <nav className="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-border">
-          <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-body text-sm">
+        <nav className="fixed top-0 left-0 right-0 z-40 glass-nav">
+          <div className="container mx-auto px-6 h-[68px] flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-body text-sm">
               <ArrowLeft size={16} />
               Voltar ao blog
             </Link>
-            <div className="flex items-center gap-2">
-              <img src={foxLogo} alt="Focus Tech" className="w-9 h-9 object-contain" />
-              <span className="font-display text-xl tracking-wider text-foreground hidden sm:inline">
+            <div className="flex items-center gap-2.5">
+              <img src={foxLogo} alt="Focus Tech" className="w-[42px] h-[42px] object-contain" />
+              <span className="font-display text-[17px] font-bold tracking-tight text-foreground hidden sm:inline">
                 FOCUS <span className="text-primary">TECH BLOG</span>
               </span>
             </div>
           </div>
         </nav>
 
-        {/* Article content */}
-        <article className="pt-24 pb-16">
-          <div className="container mx-auto px-4 max-w-3xl">
+        <article className="pt-32 pb-20">
+          <div className="container mx-auto px-6 max-w-3xl">
             {/* Header */}
-            <header className="mb-10">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="px-2.5 py-1 bg-primary/15 text-primary font-mono-code text-xs rounded border border-primary/30">
+            <header className="mb-10 animate-fade-up">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="px-3 py-1 bg-primary text-primary-foreground font-body font-semibold text-[11px] tracking-wider uppercase rounded-full">
                   {article.category}
                 </span>
-                <span className="font-mono-code text-xs text-muted-foreground">
-                  #{String(article.id).padStart(2, "0")}
+                <span className="text-xs text-muted-foreground font-body flex items-center gap-1.5">
+                  <Clock size={12} /> {article.readTime} de leitura
                 </span>
               </div>
 
-              <h1 className="font-display text-4xl md:text-6xl text-foreground leading-tight mb-6 text-glow-orange">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.05] mb-6 text-balance">
                 {article.title}
               </h1>
 
-              <p className="font-body text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="font-body text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                 {article.excerpt}
               </p>
 
-              {/* Meta */}
-              <div className="flex flex-wrap items-center gap-4 text-sm border-t border-b border-border py-4">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <User size={14} className="text-primary" />
-                  <span className="font-body">{article.author}</span>
+              <div className="flex flex-wrap items-center gap-5 text-sm border-y border-border py-4">
+                <div className="flex items-center gap-2 text-foreground">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-soft flex items-center justify-center">
+                    <span className="font-display text-xs font-bold text-primary-foreground">
+                      {article.author.split(" ").map(n => n[0]).join("").slice(0,2)}
+                    </span>
+                  </div>
+                  <span className="font-body font-medium">{article.author}</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
-                  <Calendar size={14} className="text-primary" />
+                  <Calendar size={14} />
                   <span className="font-body">{article.date}</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Clock size={14} className="text-primary" />
-                  <span className="font-body">{article.readTime} leitura</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Tag size={14} className="text-primary" />
-                  <span className="font-body">{article.category}</span>
                 </div>
               </div>
             </header>
 
+            {/* Cover image */}
+            <div className="rounded-2xl overflow-hidden mb-10 border border-border shadow-elevated aspect-[16/9]">
+              <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+            </div>
+
             {/* Body */}
             <div className="space-y-6 mb-16">
               {article.content.map((paragraph, i) => (
-                <p key={i} className="font-body text-base md:text-lg text-foreground/85 leading-relaxed">
+                <p key={i} className="font-body text-base md:text-lg text-foreground/85 leading-[1.8]">
                   {paragraph}
                 </p>
               ))}
@@ -104,10 +101,10 @@ const ArticlePage = () => {
               {prevArticle ? (
                 <Link
                   to={`/artigo/${prevArticle.id}`}
-                  className="group bg-card border border-border rounded-lg p-4 hover:border-primary transition-all duration-300"
+                  className="group bg-card border border-border rounded-2xl p-5 hover:border-primary/40 hover:shadow-soft transition-all duration-300"
                 >
-                  <span className="font-mono-code text-xs text-muted-foreground">← Anterior</span>
-                  <p className="font-display text-sm text-foreground mt-1 group-hover:text-glow-orange transition-all">
+                  <span className="font-body text-xs text-muted-foreground">← Anterior</span>
+                  <p className="font-display text-sm text-foreground mt-1.5 group-hover:text-primary transition-colors">
                     {prevArticle.title}
                   </p>
                 </Link>
@@ -115,10 +112,10 @@ const ArticlePage = () => {
               {nextArticle && (
                 <Link
                   to={`/artigo/${nextArticle.id}`}
-                  className="group bg-card border border-border rounded-lg p-4 hover:border-primary transition-all duration-300 text-right"
+                  className="group bg-card border border-border rounded-2xl p-5 hover:border-primary/40 hover:shadow-soft transition-all duration-300 text-right"
                 >
-                  <span className="font-mono-code text-xs text-muted-foreground">Próximo →</span>
-                  <p className="font-display text-sm text-foreground mt-1 group-hover:text-glow-orange transition-all">
+                  <span className="font-body text-xs text-muted-foreground">Próximo →</span>
+                  <p className="font-display text-sm text-foreground mt-1.5 group-hover:text-primary transition-colors">
                     {nextArticle.title}
                   </p>
                 </Link>
@@ -127,14 +124,13 @@ const ArticlePage = () => {
           </div>
         </article>
 
-        {/* Footer */}
-        <footer className="border-t border-border py-6">
-          <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <span className="font-mono-code text-xs text-muted-foreground">
+        <footer className="border-t border-border/60 py-8">
+          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <span className="text-xs font-body text-muted-foreground">
               © 2025 Focus Tecnologia. Todos os direitos reservados.
             </span>
-            <span className="font-mono-code text-xs text-muted-foreground">
-              v2.4.1 • Sistema operacional
+            <span className="text-xs font-body text-muted-foreground">
+              Inteligência Artificial • Software • Automação
             </span>
           </div>
         </footer>

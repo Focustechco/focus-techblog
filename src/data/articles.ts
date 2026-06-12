@@ -7,6 +7,7 @@ export interface Article {
   author: string;
   date: string;
   readTime: string;
+  image: string;
 }
 
 export const articles: Article[] = [
@@ -15,9 +16,10 @@ export const articles: Article[] = [
     title: "O Futuro da Automação com IA Generativa",
     category: "IA",
     excerpt: "Como modelos de linguagem estão transformando processos empresariais e criando novas oportunidades de negócio.",
-    author: "Lucas Ferreira",
+    author: "Adriano Leal",
     date: "20 Mar 2025",
     readTime: "7 min",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80",
     content: [
       "A inteligência artificial generativa está redefinindo o que é possível no mundo dos negócios. Modelos como GPT-4, Claude e Gemini não são apenas ferramentas de texto — são motores de transformação empresarial que automatizam tarefas complexas, geram insights estratégicos e criam conteúdo em escala.",
       "Empresas que adotaram IA generativa reportam ganhos de produtividade de até 40% em áreas como atendimento ao cliente, geração de relatórios e análise de dados. A automação inteligente vai além de scripts simples: ela compreende contexto, aprende com feedback e se adapta continuamente.",
@@ -31,9 +33,10 @@ export const articles: Article[] = [
     title: "5 Ferramentas Essenciais para Startups em 2025",
     category: "Startups",
     excerpt: "As tecnologias que toda startup precisa conhecer para escalar com eficiência e velocidade no mercado atual.",
-    author: "Ana Costa",
+    author: "Gabriel Sbrana",
     date: "18 Mar 2025",
     readTime: "5 min",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
     content: [
       "O ecossistema de startups em 2025 é mais competitivo do que nunca. Para sobreviver e escalar, é fundamental escolher as ferramentas certas desde o início. Aqui estão as cinco que consideramos indispensáveis.",
       "1. Plataformas de Backend-as-a-Service (BaaS): Soluções como Supabase e Firebase permitem que times pequenos construam backends robustos sem engenheiros de infraestrutura dedicados. Autenticação, banco de dados e storage prontos para uso.",
@@ -48,9 +51,10 @@ export const articles: Article[] = [
     title: "Marketing Digital com Machine Learning",
     category: "Marketing",
     excerpt: "Estratégias avançadas de segmentação e personalização usando algoritmos de aprendizado de máquina.",
-    author: "Maria Oliveira",
+    author: "Maria Esther",
     date: "15 Mar 2025",
     readTime: "6 min",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
     content: [
       "O marketing digital está passando por uma revolução silenciosa impulsionada por machine learning. Algoritmos de ML permitem segmentação de audiência com precisão cirúrgica, personalização em tempo real e otimização contínua de campanhas.",
       "Modelos de propensão de compra analisam centenas de variáveis comportamentais para prever quais leads têm maior probabilidade de conversão. Isso permite que equipes de marketing foquem seus esforços nos prospects mais promissores.",
@@ -64,9 +68,10 @@ export const articles: Article[] = [
     title: "DevOps e a Cultura de Automação Contínua",
     category: "Automação",
     excerpt: "Pipelines inteligentes, deploys automatizados e a evolução do desenvolvimento ágil moderno.",
-    author: "Pedro Santos",
+    author: "Marcelo Rezende",
     date: "12 Mar 2025",
     readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80",
     content: [
       "DevOps não é apenas um conjunto de ferramentas — é uma cultura que une desenvolvimento e operações em torno de um objetivo comum: entregar software de qualidade com velocidade e confiabilidade.",
       "A automação contínua é o coração dessa cultura. Desde o commit até a produção, cada etapa do ciclo de vida do software pode e deve ser automatizada: build, testes, análise de código, deploy e monitoramento.",
@@ -80,9 +85,10 @@ export const articles: Article[] = [
     title: "React 19: O Que Mudou e Por Que Importa",
     category: "Tecnologia",
     excerpt: "As principais mudanças do React 19 e como elas impactam o desenvolvimento frontend profissional.",
-    author: "Lucas Ferreira",
+    author: "Adriano Leal",
     date: "10 Mar 2025",
     readTime: "6 min",
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1600&q=80",
     content: [
       "O React 19 trouxe mudanças significativas que impactam a forma como construímos aplicações frontend. Server Components, Actions e o novo compilador são as estrelas dessa versão.",
       "Server Components permitem renderizar partes da UI no servidor, reduzindo drasticamente o JavaScript enviado ao cliente. Isso melhora performance, SEO e a experiência do usuário em conexões lentas.",
@@ -96,9 +102,10 @@ export const articles: Article[] = [
     title: "Como Estruturar um Time de Desenvolvimento",
     category: "Startups",
     excerpt: "Dicas práticas para montar e gerir equipes de dev de alta performance em startups de tecnologia.",
-    author: "Ana Costa",
+    author: "Gabriel Sbrana",
     date: "8 Mar 2025",
     readTime: "7 min",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
     content: [
       "Montar um time de desenvolvimento de alta performance é um dos maiores desafios de qualquer startup. A diferença entre um time mediano e um time excepcional pode determinar o sucesso ou fracasso do produto.",
       "A estrutura ideal depende do estágio da empresa. Em estágio seed, generalistas full-stack são mais valiosos que especialistas. Conforme a empresa cresce, a especialização se torna necessária para manter qualidade e velocidade.",
@@ -112,9 +119,10 @@ export const articles: Article[] = [
     title: "Segurança Cibernética na Era da IA",
     category: "Tecnologia",
     excerpt: "Novas ameaças e defesas inteligentes em um mundo cada vez mais conectado e dependente de dados.",
-    author: "Pedro Santos",
+    author: "Marcelo Rezende",
     date: "5 Mar 2025",
     readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80",
     content: [
       "A inteligência artificial está transformando tanto os ataques quanto as defesas cibernéticas. Deepfakes, phishing personalizado por IA e malware polimórfico representam ameaças cada vez mais sofisticadas.",
       "Por outro lado, sistemas de detecção baseados em ML analisam padrões de tráfego de rede em tempo real e identificam anomalias que seriam impossíveis de detectar manualmente. A IA é tanto a espada quanto o escudo.",
@@ -128,9 +136,10 @@ export const articles: Article[] = [
     title: "Automação de Processos com No-Code",
     category: "Automação",
     excerpt: "Plataformas no-code estão democratizando a automação. Entenda como aproveitar essa tendência.",
-    author: "Maria Oliveira",
+    author: "Maria Esther",
     date: "3 Mar 2025",
     readTime: "5 min",
+    image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1600&q=80",
     content: [
       "O movimento no-code está democratizando a automação de processos. Ferramentas como Zapier, Make (antigo Integromat) e n8n permitem que qualquer pessoa automatize fluxos de trabalho sem escrever uma linha de código.",
       "Os casos de uso são vastos: sincronização de dados entre CRM e e-mail marketing, notificações automáticas em Slack quando um pagamento é processado, geração automática de relatórios semanais, e muito mais.",
@@ -144,9 +153,10 @@ export const articles: Article[] = [
     title: "Growth Hacking para Produtos Digitais",
     category: "Marketing",
     excerpt: "Técnicas de crescimento acelerado que as maiores startups do mundo utilizam em seus produtos.",
-    author: "Ana Costa",
+    author: "Gabriel Sbrana",
     date: "1 Mar 2025",
     readTime: "6 min",
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1600&q=80",
     content: [
       "Growth hacking é mais do que marketing — é uma mentalidade de experimentação contínua focada em crescimento. As startups mais bem-sucedidas do mundo usam dados e criatividade para encontrar alavancas de crescimento não óbvias.",
       "O framework AARRR (Acquisition, Activation, Retention, Revenue, Referral) continua sendo a base para entender e otimizar o funil de crescimento. Cada etapa merece métricas específicas e experimentos dedicados.",
@@ -160,9 +170,10 @@ export const articles: Article[] = [
     title: "Introdução ao Edge Computing",
     category: "Dev",
     excerpt: "Processamento na borda da rede: por que isso é importante para o futuro das aplicações web.",
-    author: "Pedro Santos",
+    author: "Marcelo Rezende",
     date: "27 Feb 2025",
     readTime: "7 min",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80",
     content: [
       "Edge computing representa uma mudança fundamental na arquitetura de aplicações web. Em vez de processar tudo em data centers centralizados, a computação acontece na borda da rede, próxima ao usuário final.",
       "Plataformas como Cloudflare Workers, Deno Deploy e Vercel Edge Functions permitem executar código em centenas de pontos de presença globalmente. O resultado: latência reduzida de centenas para dezenas de milissegundos.",
@@ -176,9 +187,10 @@ export const articles: Article[] = [
     title: "Construindo APIs Escaláveis com Supabase",
     category: "Dev",
     excerpt: "Backend como serviço: como criar APIs robustas e escaláveis sem gerenciar infraestrutura.",
-    author: "Lucas Ferreira",
+    author: "Adriano Leal",
     date: "24 Feb 2025",
     readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1600&q=80",
     content: [
       "Supabase se consolidou como uma das melhores alternativas open-source ao Firebase. Com PostgreSQL como base, oferece um conjunto completo de ferramentas para backend: autenticação, banco de dados, storage e edge functions.",
       "A API automática gerada a partir do schema do banco de dados elimina a necessidade de escrever endpoints CRUD manualmente. Row Level Security (RLS) do PostgreSQL garante segurança a nível de linha sem middleware adicional.",
@@ -192,9 +204,10 @@ export const articles: Article[] = [
     title: "IA Conversacional e Atendimento ao Cliente",
     category: "IA",
     excerpt: "Chatbots inteligentes estão redefinindo o suporte ao cliente. Veja cases reais de implementação.",
-    author: "Maria Oliveira",
+    author: "Maria Esther",
     date: "21 Feb 2025",
     readTime: "6 min",
+    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1600&q=80",
     content: [
       "A IA conversacional evoluiu drasticamente nos últimos dois anos. Chatbots modernos baseados em LLMs compreendem contexto, mantêm conversas coerentes e resolvem problemas complexos sem intervenção humana.",
       "Empresas que implementam IA conversacional reportam redução de até 70% no volume de tickets de suporte nível 1. O tempo médio de resolução cai de horas para segundos em casos rotineiros.",
