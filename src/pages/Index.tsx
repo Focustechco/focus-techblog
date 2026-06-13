@@ -12,7 +12,8 @@ const Index = () => {
 
   const filteredArticles = useMemo(() => {
     if (activeCategory === "Todos") return articles.slice(1);
-    return articles.filter((a) => a.category === activeCategory);
+    const inCat = articles.filter((a) => a.category === activeCategory);
+    return inCat.slice(1);
   }, [activeCategory]);
 
   return (
