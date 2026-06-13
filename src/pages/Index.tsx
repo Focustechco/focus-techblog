@@ -9,12 +9,28 @@ import { articles } from "@/data/articles";
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("Todos");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const isSearching = searchQuery.trim().length > 0;
+
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return [];
+    return articles.filter(
+      (a) =>
+        a.title.toLowerCase().includes(q) ||
+        a.excerpt.toLowerCase().includes(q) ||
+        a.category.toLowerCase().includes(q) ||
+        a.author.toLowerCase().includes(q)
+    );
+  }, [searchQuery]);
 
   const filteredArticles = useMemo(() => {
+    if (isSearching) return searchResults;
     if (activeCategory === "Todos") return articles.slice(1);
     const inCat = articles.filter((a) => a.category === activeCategory);
     return inCat.slice(1);
-  }, [activeCategory]);
+  }, [activeCategory, isSearching, searchResults]);
 
   return (
     <div className="min-h-screen relative bg-background">
