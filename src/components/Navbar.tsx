@@ -7,11 +7,12 @@ const categories = ["Tecnologia", "IA", "Startups", "Marketing", "Automação", 
 interface NavbarProps {
   activeCategory: string;
   onCategoryChange: (cat: string) => void;
+  searchQuery: string;
+  onSearchChange: (q: string) => void;
 }
 
-const Navbar = ({ activeCategory, onCategoryChange }: NavbarProps) => {
+const Navbar = ({ activeCategory, onCategoryChange, searchQuery, onSearchChange }: NavbarProps) => {
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 glass-nav">
@@ -58,7 +59,7 @@ const Navbar = ({ activeCategory, onCategoryChange }: NavbarProps) => {
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => onSearchChange(e.target.value)}
                 placeholder="Buscar artigos..."
                 className="bg-secondary border border-border rounded-full px-4 py-2 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-all w-48"
                 autoFocus

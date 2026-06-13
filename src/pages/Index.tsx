@@ -9,12 +9,28 @@ import { articles } from "@/data/articles";
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("Todos");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const isSearching = searchQuery.trim().length > 0;
+
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return [];
+    return articles.filter(
+      (a) =>
+        a.title.toLowerCase().includes(q) ||
+        a.excerpt.toLowerCase().includes(q) ||
+        a.category.toLowerCase().includes(q) ||
+        a.author.toLowerCase().includes(q)
+    );
+  }, [searchQuery]);
 
   const filteredArticles = useMemo(() => {
+    if (isSearching) return searchResults;
     if (activeCategory === "Todos") return articles.slice(1);
     const inCat = articles.filter((a) => a.category === activeCategory);
     return inCat.slice(1);
-  }, [activeCategory]);
+  }, [activeCategory, isSearching, searchResults]);
 
   return (
     <div className="min-h-screen relative bg-background">
@@ -25,7 +41,15 @@ const Index = () => {
       </div>
 
       <div className="relative z-10">
-        <Navbar activeCategory={activeCategory} onCategoryChange={setActiveCategory} />
+        <Navbar
+          activeCategory={activeCategory}
+          onCategoryChange={(c) => {
+            setActiveCategory(c);
+            setSearchQuery("");
+          }}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
 
         <div className="pt-[100px] md:pt-[68px]">
           <StatusBar />
@@ -33,9 +57,11 @@ const Index = () => {
 
           <main className="container mx-auto px-6 py-10 md:py-14">
             {/* Hero */}
-            <section className="mb-14 animate-fade-up">
-              <HeroSection category={activeCategory} />
-            </section>
+            {!isSearching && (
+              <section className="mb-14 animate-fade-up">
+                <HeroSection category={activeCategory} />
+              </section>
+            )}
 
             {/* Feed + Sidebar */}
             <div className="flex flex-col lg:flex-row gap-10">
@@ -43,17 +69,23 @@ const Index = () => {
                 <div className="flex items-end justify-between gap-3 mb-7">
                   <div>
                     <p className="font-body text-xs font-semibold uppercase tracking-wider text-primary mb-1.5">
-                      Mais recentes
+                      {isSearching ? "Resultados da busca" : "Mais recentes"}
                     </p>
                     <h2 className="font-display text-3xl md:text-4xl text-foreground">
-                      Últimos artigos
+                      {isSearching ? `"${searchQuery}"` : "Últimos artigos"}
                     </h2>
                   </div>
                   <span className="font-body text-xs text-muted-foreground pb-2">
                     {filteredArticles.length} {filteredArticles.length === 1 ? "publicação" : "publicações"}
                   </span>
                 </div>
-                <ArticleFeed articles={filteredArticles} />
+                {filteredArticles.length === 0 ? (
+                  <div className="border border-border rounded-2xl p-10 text-center text-muted-foreground font-body">
+                    Nenhum artigo encontrado para "{searchQuery}".
+                  </div>
+                ) : (
+                  <ArticleFeed articles={filteredArticles} />
+                )}
               </div>
 
               <div className="w-full lg:w-[340px] shrink-0">
