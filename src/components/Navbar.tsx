@@ -7,11 +7,12 @@ const categories = ["Tecnologia", "IA", "Startups", "Marketing", "Automação", 
 interface NavbarProps {
   activeCategory: string;
   onCategoryChange: (cat: string) => void;
+  searchQuery: string;
+  onSearchChange: (q: string) => void;
 }
 
-const Navbar = ({ activeCategory, onCategoryChange }: NavbarProps) => {
+const Navbar = ({ activeCategory, onCategoryChange, searchQuery, onSearchChange }: NavbarProps) => {
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 glass-nav">
