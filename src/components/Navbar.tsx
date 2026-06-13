@@ -59,7 +59,7 @@ const Navbar = ({ activeCategory, onCategoryChange, searchQuery, onSearchChange 
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => onSearchChange(e.target.value)}
                 placeholder="Buscar artigos..."
                 className="bg-secondary border border-border rounded-full px-4 py-2 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-all w-48"
                 autoFocus
