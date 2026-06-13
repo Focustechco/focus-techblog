@@ -2,8 +2,15 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Clock } from "lucide-react";
 import { articles } from "@/data/articles";
 
-const HeroSection = () => {
-  const featured = articles[0];
+interface HeroSectionProps {
+  category?: string;
+}
+
+const HeroSection = ({ category = "Todos" }: HeroSectionProps) => {
+  const featured =
+    category === "Todos"
+      ? articles[0]
+      : articles.find((a) => a.category === category) ?? articles[0];
 
   return (
     <Link

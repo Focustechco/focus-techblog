@@ -33,7 +33,7 @@ const Index = () => {
           <main className="container mx-auto px-6 py-10 md:py-14">
             {/* Hero */}
             <section className="mb-14 animate-fade-up">
-              <HeroSection />
+              <HeroSection category={activeCategory} />
             </section>
 
             {/* Feed + Sidebar */}
