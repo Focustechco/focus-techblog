@@ -35,7 +35,7 @@ const BlogSidebar = () => {
       <div className="bg-card border border-border rounded-2xl p-6">
         <h3 className="font-display text-base text-foreground flex items-center gap-2 mb-5">
           <TrendingUp size={16} className="text-primary" />
-          Categorias em alta
+          Assuntos em alta
         </h3>
         <ul className="space-y-1">
           {trendingTopics.map((topic) => {
