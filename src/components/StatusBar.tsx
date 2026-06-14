@@ -11,7 +11,7 @@ const StatusBar = () => {
   return (
     <div className="border-b border-border/60">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between py-3 gap-6 overflow-x-auto">
+        <div className="flex items-center justify-between py-3 gap-4 overflow-x-auto">
           {stats.map((stat) => (
             <div key={stat.label} className="flex items-center gap-2.5 shrink-0">
               <stat.icon size={14} className="text-primary" />
