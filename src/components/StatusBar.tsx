@@ -1,10 +1,10 @@
-import { FileText, Users, PenTool, Activity } from "lucide-react";
+import { FileText, Users, PenTool, CalendarDays } from "lucide-react";
 
 const stats = [
   { icon: FileText, label: "Artigos publicados", value: "128" },
   { icon: Users, label: "Leitores ativos", value: "2.4K" },
   { icon: PenTool, label: "Autores especialistas", value: "12" },
-  { icon: Activity, label: "Disponibilidade", value: "99.9%" },
+  { icon: CalendarDays, label: "Novos artigos", value: "toda quarta" },
 ];
 
 const StatusBar = () => {
