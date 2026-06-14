@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { TrendingUp, Mail, Sparkles, Cpu, Workflow, BarChart3, Cloud, Code2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { TrendingUp, Mail, Sparkles, Workflow, BarChart3, Cloud, Code2 } from "lucide-react";
 
 const trendingTopics = [
-  { name: "Inteligência Artificial", count: 24, icon: Sparkles },
-  { name: "Automação de Processos", count: 18, icon: Workflow },
-  { name: "React & TypeScript", count: 15, icon: Code2 },
-  { name: "Startups & Funding", count: 12, icon: BarChart3 },
-  { name: "Cloud Computing", count: 9, icon: Cloud },
+  { name: "Inteligência Artificial", count: 24, icon: Sparkles, slug: "inteligencia-artificial" },
+  { name: "Automação de Processos", count: 18, icon: Workflow, slug: "automacao-empresarial" },
+  { name: "React & TypeScript", count: 15, icon: Code2, slug: "react-typescript" },
+  { name: "Startups & Funding", count: 12, icon: BarChart3, slug: "startups-funding" },
+  { name: "Cloud Computing", count: 9, icon: Cloud, slug: "cloud-computing" },
 ];
 
 const authors = [
@@ -42,7 +43,10 @@ const BlogSidebar = () => {
             const Icon = topic.icon;
             return (
               <li key={topic.name}>
-                <button className="w-full flex items-center justify-between gap-3 p-2.5 rounded-lg hover:bg-secondary transition-colors group">
+                <Link
+                  to={`/hub/${topic.slug}`}
+                  className="w-full flex items-center justify-between gap-3 p-2.5 rounded-lg hover:bg-secondary transition-colors group"
+                >
                   <span className="flex items-center gap-3 min-w-0">
                     <span className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-colors">
                       <Icon size={14} className="text-muted-foreground group-hover:text-primary transition-colors" />
@@ -54,7 +58,7 @@ const BlogSidebar = () => {
                   <span className="text-xs font-mono-code text-muted-foreground tabular-nums">
                     {topic.count}
                   </span>
-                </button>
+                </Link>
               </li>
             );
           })}
