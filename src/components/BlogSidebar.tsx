@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { TrendingUp, Mail, Sparkles, Workflow, BarChart3, Cloud, Code2 } from "lucide-react";
+import adrianoPhoto from "@/assets/authors/adriano.png";
+import gabrielPhoto from "@/assets/authors/gabriel.jpg";
+import mariaPhoto from "@/assets/authors/maria.jpg";
+import marceloPhoto from "@/assets/authors/marcelo.jpg";
 
 const trendingTopics = [
   { name: "Inteligência Artificial", count: 24, icon: Sparkles, slug: "inteligencia-artificial" },
@@ -11,10 +15,10 @@ const trendingTopics = [
 ];
 
 const authors = [
-  { name: "Adriano Leal", role: "CTO" },
-  { name: "Gabriel Sbrana", role: "Dev Lead" },
-  { name: "Maria Esther", role: "AI Researcher" },
-  { name: "Marcelo Rezende", role: "UX Designer" },
+  { name: "Adriano Leal", role: "CTO", photo: adrianoPhoto },
+  { name: "Gabriel Sbrana", role: "Dev Lead", photo: gabrielPhoto },
+  { name: "Maria Esther", role: "AI Researcher", photo: mariaPhoto },
+  { name: "Marcelo Rezende", role: "UX Designer", photo: marceloPhoto },
 ];
 
 const BlogSidebar = () => {
@@ -72,10 +76,8 @@ const BlogSidebar = () => {
           {authors.map((author) => (
             <div key={author.name} className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3 min-w-0">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-primary-soft flex items-center justify-center shrink-0">
-                  <span className="font-display text-sm font-bold text-primary-foreground">
-                    {author.name.split(" ").map(n => n[0]).join("").slice(0,2)}
-                  </span>
+                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 border border-border">
+                  <img src={author.photo} alt={author.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="min-w-0">
                   <p className="font-body text-sm font-medium text-foreground leading-tight truncate">{author.name}</p>
