@@ -76,10 +76,8 @@ const BlogSidebar = () => {
           {authors.map((author) => (
             <div key={author.name} className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3 min-w-0">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-primary-soft flex items-center justify-center shrink-0">
-                  <span className="font-display text-sm font-bold text-primary-foreground">
-                    {author.name.split(" ").map(n => n[0]).join("").slice(0,2)}
-                  </span>
+                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 border border-border">
+                  <img src={author.photo} alt={author.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="min-w-0">
                   <p className="font-body text-sm font-medium text-foreground leading-tight truncate">{author.name}</p>
