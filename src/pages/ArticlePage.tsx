@@ -1,7 +1,18 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
+import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { articles } from "@/data/articles";
 import foxLogo from "@/assets/fox-logo.png";
+import adrianoPhoto from "@/assets/authors/adriano.png";
+import gabrielPhoto from "@/assets/authors/gabriel.jpg";
+import mariaPhoto from "@/assets/authors/maria.jpg";
+import marceloPhoto from "@/assets/authors/marcelo.jpg";
+
+const authorPhotos: Record<string, string> = {
+  "Adriano Leal": adrianoPhoto,
+  "Gabriel Sbrana": gabrielPhoto,
+  "Maria Esther": mariaPhoto,
+  "Marcelo Rezende": marceloPhoto,
+};
 
 const ArticlePage = () => {
   const { id } = useParams();
