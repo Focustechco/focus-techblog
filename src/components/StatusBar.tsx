@@ -3,7 +3,7 @@ import { FileText, Users, PenTool, CalendarDays } from "lucide-react";
 const stats = [
   { icon: FileText, label: "Artigos publicados", value: "128" },
   { icon: Users, label: "Leitores ativos", value: "2.4K" },
-  { icon: PenTool, label: "Autores especialistas", value: "12" },
+  { icon: PenTool, label: "Autores especialistas", value: "4" },
   { icon: CalendarDays, label: "Novos artigos", value: "toda quarta" },
 ];
 
