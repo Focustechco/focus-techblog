@@ -1,7 +1,18 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
+import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { articles } from "@/data/articles";
 import foxLogo from "@/assets/fox-logo.png";
+import adrianoPhoto from "@/assets/authors/adriano.png";
+import gabrielPhoto from "@/assets/authors/gabriel.jpg";
+import mariaPhoto from "@/assets/authors/maria.jpg";
+import marceloPhoto from "@/assets/authors/marcelo.jpg";
+
+const authorPhotos: Record<string, string> = {
+  "Adriano Leal": adrianoPhoto,
+  "Gabriel Sbrana": gabrielPhoto,
+  "Maria Esther": mariaPhoto,
+  "Marcelo Rezende": marceloPhoto,
+};
 
 const ArticlePage = () => {
   const { id } = useParams();
@@ -68,10 +79,12 @@ const ArticlePage = () => {
 
               <div className="flex flex-wrap items-center gap-5 text-sm border-y border-border py-4">
                 <div className="flex items-center gap-2 text-foreground">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-soft flex items-center justify-center">
-                    <span className="font-display text-xs font-bold text-primary-foreground">
-                      {article.author.split(" ").map(n => n[0]).join("").slice(0,2)}
-                    </span>
+                  <div className="w-8 h-8 rounded-full overflow-hidden border border-border">
+                    <img
+                      src={authorPhotos[article.author] || adrianoPhoto}
+                      alt={article.author}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <span className="font-body font-medium">{article.author}</span>
                 </div>
