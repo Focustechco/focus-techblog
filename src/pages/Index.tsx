@@ -100,7 +100,7 @@ const Index = () => {
           <footer className="border-t border-border/60 py-8 mt-16">
             <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
               <span className="text-xs font-body text-muted-foreground">
-                © 2025 Focus Tecnologia. Todos os direitos reservados.
+                © 2025 Focus Tecnologia Ltda. Todos os direitos reservados.
               </span>
               <span className="text-xs font-body text-muted-foreground">
                 Inteligência Artificial • Software • Automação

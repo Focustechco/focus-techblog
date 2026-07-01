@@ -15,10 +15,10 @@ const trendingTopics = [
 ];
 
 const authors = [
-  { name: "Adriano Leal", role: "CTO", photo: adrianoPhoto },
+  { name: "Adriano Leal", role: "Founder and CEO", photo: adrianoPhoto },
   { name: "Gabriel Sbrana", role: "Dev Lead", photo: gabrielPhoto },
   { name: "Maria Esther", role: "AI Researcher", photo: mariaPhoto },
-  { name: "Marcelo Rezende", role: "UX Designer", photo: marceloPhoto },
+  { name: "Marcelo Rezende", role: "Business leader", photo: marceloPhoto },
 ];
 
 const BlogSidebar = () => {
