@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { TrendingUp, Mail, Sparkles, Workflow, BarChart3, Cloud, Code2 } from "lucide-react";
+import adrianoPhoto from "@/assets/authors/adriano.png";
+import gabrielPhoto from "@/assets/authors/gabriel.jpg";
+import mariaPhoto from "@/assets/authors/maria.jpg";
+import marceloPhoto from "@/assets/authors/marcelo.jpg";
 
 const trendingTopics = [
   { name: "Inteligência Artificial", count: 24, icon: Sparkles, slug: "inteligencia-artificial" },
@@ -11,10 +15,10 @@ const trendingTopics = [
 ];
 
 const authors = [
-  { name: "Adriano Leal", role: "CTO" },
-  { name: "Gabriel Sbrana", role: "Dev Lead" },
-  { name: "Maria Esther", role: "AI Researcher" },
-  { name: "Marcelo Rezende", role: "UX Designer" },
+  { name: "Adriano Leal", role: "CTO", photo: adrianoPhoto },
+  { name: "Gabriel Sbrana", role: "Dev Lead", photo: gabrielPhoto },
+  { name: "Maria Esther", role: "AI Researcher", photo: mariaPhoto },
+  { name: "Marcelo Rezende", role: "UX Designer", photo: marceloPhoto },
 ];
 
 const BlogSidebar = () => {
