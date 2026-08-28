@@ -13,7 +13,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: 20,
-    title: "Focus Start : Programa deEstágio",
+    title: "Focus Start: Programa de Estágio",
     category: "Startups",
     excerpt:
       "Desenvolvendo pessoas para desenvolver soluções: o programa de estágio da Focus Tech que transforma oportunidade em desenvolvimento e potencial em experiência.",
