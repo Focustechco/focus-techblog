@@ -12,6 +12,26 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 20,
+    title: "Focus Start – Programa de Estágio",
+    category: "Startups",
+    excerpt:
+      "Desenvolvendo pessoas para desenvolver soluções: o programa de estágio da Focus Tech que transforma oportunidade em desenvolvimento e potencial em experiência.",
+    author: "Adriano Leal",
+    date: "28 Ago 2026",
+    readTime: "4 min",
+    image: "/__l5e/assets-v1/86091ab5-28f4-44f0-9362-672faacd64a8/focus-start.jpg",
+    content: [
+      "Desenvolvendo pessoas para desenvolver soluções. O Focus Start é o programa de estágio da Focus Tech criado para transformar oportunidade em desenvolvimento e potencial em experiência.",
+      "Em parceria com a EEEP Mário Alencar e a Secretaria da Educação do Estado do Ceará, o programa aproxima jovens talentos do mercado de tecnologia, proporcionando uma experiência profissional real desde o início de suas trajetórias.",
+      "Mais do que oferecer uma primeira oportunidade, a Focus Tech busca criar um ambiente onde esses talentos possam aprender, experimentar, evoluir e contribuir, conectando a formação técnica à prática profissional.",
+      "Porque, para nós, inovação não começa apenas na tecnologia. Começa nas pessoas.",
+      "Acreditamos que desenvolver profissionais é também construir o futuro. Por isso, investimos em conhecimento, experiência e oportunidades para que novos talentos possam transformar ideias em soluções e desafios em inovação e impactar ainda mais o Brasil e o mundo.",
+      "Focus Start. Desenvolvendo pessoas para desenvolver soluções.",
+    ],
+  },
+  {
+
     id: 1,
     title: "ConLibras: Inovação em Acessibilidade digital",
     category: "Acessibilidade",
