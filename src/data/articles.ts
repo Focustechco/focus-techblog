@@ -22,7 +22,7 @@ export const articles: Article[] = [
     readTime: "4 min",
     image: "/__l5e/assets-v1/86091ab5-28f4-44f0-9362-672faacd64a8/focus-start.jpg",
     content: [
-      "Desenvolvendo pessoas para desenvolver soluções. O Focus Start é o programa de estágio da Focus Tech criado para transformar oportunidade em desenvolvimento e potencial em experiência.",
+      "Desenvolvendo pessoas para desenvolver soluções. O Focus Start é o programa de estágio da Focus Tech criado para transformar oportunidade em desenvolvimento e potencial em experiência. Na área da tecnologia e engenharia de softwares.",
       "Em parceria com a EEEP Mário Alencar e a Secretaria da Educação do Estado do Ceará, o programa aproxima jovens talentos do mercado de tecnologia, proporcionando uma experiência profissional real desde o início de suas trajetórias.",
       "Mais do que oferecer uma primeira oportunidade, a Focus Tech busca criar um ambiente onde esses talentos possam aprender, experimentar, evoluir e contribuir, conectando a formação técnica à prática profissional.",
       "Porque, para nós, inovação não começa apenas na tecnologia. Começa nas pessoas.",
