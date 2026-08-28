@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 import foxLogo from "@/assets/fox-logo.png";
 
-const categories = ["Tecnologia", "IA", "Startups", "Marketing", "Automação", "Dev"];
+const categories = ["Tecnologia", "Dev", "Inovação", "Startups", "Automação", "IA", "Marketing"];
 
 interface NavbarProps {
   activeCategory: string;
