@@ -14,7 +14,7 @@ export const articles: Article[] = [
   {
     id: 20,
     title: "Focus Start: Programa de Estágio",
-    category: "Startups",
+    category: "Programação",
     excerpt:
       "Desenvolvendo pessoas para desenvolver soluções: o programa de estágio da Focus Tech que transforma oportunidade em desenvolvimento e potencial em experiência.",
     author: "Adriano Leal",
