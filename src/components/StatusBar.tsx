@@ -11,12 +11,12 @@ const StatusBar = () => {
   return (
     <div className="border-b border-border/60">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between py-3 gap-4 overflow-x-auto">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-2 py-3 md:flex md:items-center md:justify-between">
           {stats.map((stat) => (
-            <div key={stat.label} className="flex items-center gap-2.5 shrink-0">
+            <div key={stat.label} className="flex items-center gap-2 min-w-0 md:shrink-0">
               <stat.icon size={14} className="text-primary" />
-              <span className="text-xs font-body text-muted-foreground">{stat.label}</span>
-              <span className="text-xs font-body font-semibold text-foreground tabular-nums">{stat.value}</span>
+              <span className="text-[11px] md:text-xs font-body text-muted-foreground truncate">{stat.label}</span>
+              <span className="text-[11px] md:text-xs font-body font-semibold text-foreground tabular-nums whitespace-nowrap">{stat.value}</span>
             </div>
           ))}
         </div>
