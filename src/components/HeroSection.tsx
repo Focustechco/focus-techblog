@@ -30,9 +30,19 @@ const HeroSection = ({ category = "Todos" }: HeroSectionProps) => {
             <span className="text-xs text-muted-foreground font-body">• {featured.category}</span>
           </div>
 
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.05] mb-5">
-            {featured.title}
+          <h1 className="font-display text-4xl md:text-5xl lg:text-[3.25rem] text-foreground leading-[1.05] mb-5">
+            {featured.title.includes(":") ? (
+              <>
+                <span className="block">{featured.title.split(":")[0].trim()}:</span>
+                <span className="block lg:whitespace-nowrap">
+                  {featured.title.split(":").slice(1).join(":").trim()}
+                </span>
+              </>
+            ) : (
+              featured.title
+            )}
           </h1>
+
 
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
             {featured.excerpt}
