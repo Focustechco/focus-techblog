@@ -30,9 +30,19 @@ const HeroSection = ({ category = "Todos" }: HeroSectionProps) => {
             <span className="text-xs text-muted-foreground font-body">• {featured.category}</span>
           </div>
 
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.05] mb-5">
-            {featured.title}
+          <h1 className="font-display text-4xl md:text-5xl lg:text-[3.25rem] text-foreground leading-[1.05] mb-5">
+            {featured.title.includes(":") ? (
+              <>
+                <span className="block">{featured.title.split(":")[0].trim()}:</span>
+                <span className="block lg:whitespace-nowrap">
+                  {featured.title.split(":").slice(1).join(":").trim()}
+                </span>
+              </>
+            ) : (
+              featured.title
+            )}
           </h1>
+
 
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
             {featured.excerpt}
@@ -49,7 +59,7 @@ const HeroSection = ({ category = "Todos" }: HeroSectionProps) => {
           <img
             src={featured.image}
             alt={featured.title}
-            className="absolute inset-0 w-full h-full object-contain object-center transition-transform duration-[1200ms] group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-contain lg:object-cover object-center transition-transform duration-[1200ms] group-hover:scale-105"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-card via-card/40 to-transparent lg:bg-gradient-to-r lg:from-card lg:via-transparent lg:to-transparent" />
