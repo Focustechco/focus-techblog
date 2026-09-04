@@ -13,6 +13,7 @@ const authorPhotos: Record<string, string> = {
   "Gabriel Sbrana": gabrielPhoto,
   "Maria Esther": mariaPhoto,
   "Marcelo Rezende": marceloPhoto,
+  "Maria Eduarda": mariaEduardaPhoto,
 };
 
 const ArticlePage = () => {
