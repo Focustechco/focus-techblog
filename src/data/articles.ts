@@ -12,6 +12,42 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 21,
+    title: "Java 26: O Que Mudou e Por Que Isso Importa?",
+    category: "Tecnologia",
+    excerpt:
+      "Lançado em 17 de março de 2026, o Java 26 traz melhorias de desempenho, velocidade e comunicação entre sistemas. Veja o que mudou na prática.",
+    author: "Maria Eduarda",
+    date: "04 Set 2026",
+    readTime: "5 min",
+    image: "/__l5e/assets-v1/07223126-5f7a-4e0f-b597-8f98ba12ba0e/java26.jpg",
+    content: [
+      "O Java 26 foi lançado oficialmente em 17 de março de 2026. A nova versão traz melhorias voltadas principalmente para desempenho, velocidade e comunicação entre sistemas.",
+      "Mas, afinal, o que mudou?",
+      "Comunicação mais rápida com HTTP/3",
+      "O Java 26 passou a oferecer suporte ao HTTP/3 diretamente no seu cliente HTTP. Essa tecnologia utiliza o protocolo QUIC e pode melhorar a comunicação entre sistemas, principalmente em redes com maior latência ou instabilidade.",
+      "Para quem desenvolve APIs e microsserviços, isso significa uma opção mais moderna para a comunicação pela internet.",
+      "Aplicações iniciando mais rápido",
+      "O Cache AOT recebeu melhorias e passou a funcionar com diferentes sistemas de gerenciamento de memória, incluindo o ZGC.",
+      "Na prática, isso ajuda a JVM a reaproveitar informações já preparadas, podendo reduzir o tempo necessário para uma aplicação começar a funcionar.",
+      "Isso é especialmente interessante para aplicações em containers e ambientes de nuvem.",
+      "Melhor desempenho",
+      "O G1 Garbage Collector, responsável por ajudar o Java a administrar a memória, também recebeu melhorias.",
+      "A atualização reduz algumas operações internas da JVM e pode trazer ganhos de desempenho em determinados tipos de aplicação.",
+      "Mais segurança e código moderno",
+      "O Java 26 também começou a restringir alterações de campos final feitas por mecanismos avançados de reflexão. A mudança busca tornar o comportamento do Java mais previsível e seguro.",
+      "Além disso, a antiga API de Applets foi removida, eliminando uma tecnologia que já estava obsoleta.",
+      "E as novidades que ainda estão em teste?",
+      "O Java 26 também apresenta recursos em fase de preview e incubação, como a Concorrência Estruturada, que busca facilitar o trabalho com várias tarefas executadas ao mesmo tempo.",
+      "Essas funcionalidades ainda estão em desenvolvimento e podem mudar nas próximas versões.",
+      "Conclusão",
+      "O Java 26 não muda completamente a maneira de programar, mas traz melhorias importantes que acontecem principalmente \"por baixo dos panos\".",
+      "Mais velocidade, melhor comunicação, inicialização mais eficiente e uma JVM mais moderna.",
+      "Para quem trabalha com Java, acompanhar essas atualizações é importante para entender como a tecnologia está evoluindo e quais recursos podem ser úteis nos projetos do dia a dia.",
+    ],
+  },
+  {
+
     id: 20,
     title: "Focus Start: Programa de Estágio",
     category: "Programação",
