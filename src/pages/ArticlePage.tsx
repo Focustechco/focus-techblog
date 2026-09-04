@@ -6,6 +6,7 @@ import adrianoPhoto from "@/assets/authors/adriano.png";
 import gabrielPhoto from "@/assets/authors/gabriel.jpg";
 import mariaPhoto from "@/assets/authors/maria.jpg";
 import marceloPhoto from "@/assets/authors/marcelo.jpg";
+import mariaEduardaPhoto from "@/assets/authors/maria-eduarda.png";
 
 const authorPhotos: Record<string, string> = {
   "Adriano Leal": adrianoPhoto,
