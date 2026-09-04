@@ -34,9 +34,16 @@ const HeroSection = ({ category = "Todos" }: HeroSectionProps) => {
             {featured.title.includes(":") ? (
               <>
                 <span className="block">{featured.title.split(":")[0].trim()}:</span>
-                <span className="block lg:whitespace-nowrap">
+                <span
+                  className={`block ${
+                    featured.title.split(":").slice(1).join(":").trim().length <= 22
+                      ? "lg:whitespace-nowrap"
+                      : ""
+                  }`}
+                >
                   {featured.title.split(":").slice(1).join(":").trim()}
                 </span>
+
               </>
             ) : (
               featured.title
