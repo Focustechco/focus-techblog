@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { articles } from "@/data/articles";
+import ShareButtons from "@/components/ShareButtons";
+
 import foxLogo from "@/assets/fox-logo.png";
 import adrianoPhoto from "@/assets/authors/adriano.png";
 import gabrielPhoto from "@/assets/authors/gabriel.jpg";
