@@ -103,13 +103,16 @@ const ArticlePage = () => {
             </div>
 
             {/* Body */}
-            <div className="space-y-6 mb-16">
+            <div className="space-y-6 mb-6">
               {article.content.map((paragraph, i) => (
                 <p key={i} className="font-body text-base md:text-lg text-foreground/85 leading-[1.8]">
                   {paragraph}
                 </p>
               ))}
             </div>
+
+            <ShareButtons title={article.title} />
+
 
             {/* Navigation */}
             <div className="border-t border-border pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
