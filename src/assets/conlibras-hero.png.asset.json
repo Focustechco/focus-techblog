@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "f025c75d-000d-4eac-87d2-8afa30b56330",
-  "project_id": "2f4e804e-fd15-4cb8-b094-1dcc373aec53",
-  "url": "/__l5e/assets-v1/f025c75d-000d-4eac-87d2-8afa30b56330/conlibras-hero.png",
-  "r2_key": "a/v1/2f4e804e-fd15-4cb8-b094-1dcc373aec53/f025c75d-000d-4eac-87d2-8afa30b56330/conlibras-hero.png",
-  "original_filename": "conlibras-hero.png",
-  "size": 68193,
   "content_type": "image/png",
-  "created_at": "2026-06-12T23:17:49Z"
+  "created_at": "2026-06-12T23:17:49Z",
+  "original_filename": "conlibras-hero.png",
+  "project_id": "d5d33892-134f-4870-8a6e-a2d53be7c5b4",
+  "r2_key": "a/v1/d5d33892-134f-4870-8a6e-a2d53be7c5b4/f025c75d-000d-4eac-87d2-8afa30b56330/conlibras-hero.png",
+  "size": 68193,
+  "url": "/__l5e/assets-v1/f025c75d-000d-4eac-87d2-8afa30b56330/conlibras-hero.png",
+  "version": 1
 }
