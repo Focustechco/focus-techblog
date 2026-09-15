@@ -1,10 +1,11 @@
 import { FileText, Users, PenTool, CalendarDays } from "lucide-react";
+import { articles } from "@/data/articles";
 
 const stats = [
-  { icon: FileText, label: "Artigos publicados", value: "128" },
+  { icon: FileText, label: "Artigos publicados", value: String(articles.length) },
   { icon: Users, label: "Leitores ativos", value: "2.4K" },
   { icon: PenTool, label: "Autores especialistas", value: "6" },
-  { icon: CalendarDays, label: "Novos artigos", value: "toda quarta" },
+  { icon: CalendarDays, label: "Novos artigos", value: "toda semana" },
 ];
 
 const StatusBar = () => {

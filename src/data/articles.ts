@@ -20,7 +20,7 @@ export const articles: Article[] = [
     author: "Arthur Cairo",
     date: "15 Set 2026",
     readTime: "6 min",
-    image: "/__l5e/assets-v1/18ea0a6d-122b-4e92-bcd0-5f4fce093ece/semana-programador.png",
+    image: "/__l5e/assets-v1/0c38b891-cc35-4784-9925-a7d437b0d9f1/semana-programador-v2.png",
     content: [
       "A Semana do Programador reconhece uma profissão que está por trás de grande parte das tecnologias presentes no mundo atual. Dos aplicativos que usamos diariamente aos sistemas que movimentam empresas, a programação é responsável por transformar ideias em soluções digitais.",
       "A origem da data",
