@@ -1,3 +1,8 @@
+import semanaProgramadorImg from "../assets/semana-programador.jpg";
+import java26Img from "../assets/java26.jpg";
+import focusStartImg from "../assets/focus-start.jpg";
+import conlibrasImg from "../assets/conlibras-hero.png";
+
 export interface Article {
   id: number;
   title: string;
@@ -20,7 +25,7 @@ export const articles: Article[] = [
     author: "Arthur Cairo",
     date: "15 Set 2026",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1600&q=80",
+    image: semanaProgramadorImg,
     content: [
       "A Semana do Programador reconhece uma profissão que está por trás de grande parte das tecnologias presentes no mundo atual. Dos aplicativos que usamos diariamente aos sistemas que movimentam empresas, a programação é responsável por transformar ideias em soluções digitais.",
       "A origem da data",
@@ -53,7 +58,7 @@ export const articles: Article[] = [
     author: "Maria Eduarda",
     date: "04 Set 2026",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1588239034647-25783cbfcfc1?auto=format&fit=crop&w=1600&q=80",
+    image: java26Img,
     content: [
       "O Java 26 foi lançado oficialmente em 17 de março de 2026. A nova versão traz melhorias voltadas principalmente para desempenho, velocidade e comunicação entre sistemas.",
       "Mas, afinal, o que mudou?",
@@ -89,7 +94,7 @@ export const articles: Article[] = [
     author: "Adriano Leal",
     date: "28 Ago 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
+    image: focusStartImg,
     content: [
       "Desenvolvendo pessoas para desenvolver soluções. O Focus Start é o programa de estágio da Focus Tech criado para transformar oportunidade em desenvolvimento e potencial em experiência. Na área da tecnologia e engenharia de softwares.",
       "Em parceria com a EEEP Mário Alencar e a Secretaria da Educação do Estado do Ceará, o programa aproxima jovens talentos do mercado de tecnologia, proporcionando uma experiência profissional real desde o início de suas trajetórias.",
@@ -108,7 +113,7 @@ export const articles: Article[] = [
     author: "Adriano Leal",
     date: "12 Jun 2026",
     readTime: "9 min",
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
+    image: conlibrasImg,
     content: [
       "A comunicação é um direito humano fundamental. No entanto, milhões de brasileiros surdos enfrentam diariamente barreiras invisíveis ao tentar acessar serviços essenciais — do atendimento médico ao banco, da escola ao órgão público. Quando a comunicação falha, falham também a inclusão, a dignidade e a cidadania. É nesse cenário que nasce o ConLibras, plataforma de teleatendimento em Libras desenvolvida pela Focus Tecnologia para transformar a forma como instituições se comunicam com a comunidade surda.",
       "O desafio da acessibilidade na comunicação. Segundo dados do IBGE, mais de 10 milhões de brasileiros possuem algum grau de deficiência auditiva. Apesar da legislação brasileira reconhecer a Libras como meio legal de comunicação desde 2002, a realidade ainda é marcada por atendimentos improvisados, dependência de intérpretes presenciais, custos operacionais elevados, indisponibilidade imediata e limitações geográficas — especialmente em municípios menores. O resultado é um cenário em que pessoas surdas frequentemente precisam adiar consultas, abrir mão de serviços ou depender de familiares para tarefas simples do dia a dia.",
