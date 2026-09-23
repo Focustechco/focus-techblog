@@ -2,6 +2,7 @@ import semanaProgramadorImg from "../assets/semana-programador.jpg";
 import java26Img from "../assets/java26.jpg";
 import focusStartImg from "../assets/focus-start.jpg";
 import conlibrasImg from "../assets/conlibras-hero.png";
+import linuxImg from "../assets/linux-tela-preta.jpg";
 
 export interface Article {
   id: number;
@@ -15,7 +16,43 @@ export interface Article {
   image: string;
 }
 
+
 export const articles: Article[] = [
+  {
+    id: 23,
+    title: "Linux: muito além da tela preta",
+    category: "Tecnologia",
+    excerpt:
+      "Descubra por que o Linux vai muito além do terminal. O sistema que roda satélites, supercomputadores e a internet também pode transformar sua experiência no dia a dia.",
+    author: "Maria Eduarda",
+    date: "23 Set 2026",
+    readTime: "7 min",
+    image: linuxImg,
+    content: [
+      "Quando a maioria das pessoas ouve falar em Linux, a primeira imagem que vem à mente é uma tela preta cheia de texto misterioso — comandos digitados por especialistas em tecnologia. Mas essa visão está longe de representar o que o Linux realmente é e tudo o que ele é capaz de fazer.",
+      "O que é o Linux?",
+      "Linux é um sistema operacional de código aberto criado em 1991 por Linus Torvalds, então um estudante universitário finlandês. Desde o início, ele foi desenvolvido de forma colaborativa, com contribuições de programadores do mundo inteiro. Hoje, o kernel Linux é mantido por milhares de desenvolvedores e empresas como Google, Intel, IBM e Red Hat.",
+      "Diferente do Windows ou do macOS, o Linux não pertence a uma única empresa. Seu código-fonte é público, o que significa que qualquer pessoa pode estudá-lo, modificá-lo e distribuí-lo — desde que respeite os termos da licença livre.",
+      "Linux está em todo lugar — menos onde você imagina",
+      "A maioria das pessoas não percebe, mas o Linux já faz parte da sua rotina. Os servidores que sustentam o Google, o YouTube, o Facebook e praticamente toda a internet rodam Linux. Os supercomputadores mais poderosos do mundo usam Linux. A Estação Espacial Internacional opera com Linux. Os satélites da SpaceX e os sistemas de bordo de muitos veículos modernos também.",
+      "E tem mais: o Android, sistema operacional presente na maioria dos smartphones do mundo, é baseado no kernel Linux. Ou seja, há uma boa chance de que você já use Linux todos os dias sem saber.",
+      "As distribuições: Linux para todos os perfis",
+      "Uma das grandes vantagens do Linux é a variedade de distribuições — também chamadas de 'distros'. Cada distribuição é uma versão personalizada do sistema, adaptada para diferentes públicos e necessidades.",
+      "O Ubuntu é uma das mais conhecidas e indicadas para iniciantes, com interface amigável e grande comunidade de suporte. O Fedora é voltado para quem gosta de tecnologias mais recentes. O Debian prima pela estabilidade. O Arch Linux agrada quem quer controle total sobre o sistema. Já o Linux Mint é frequentemente recomendado para quem está migrando do Windows.",
+      "Existe uma distribuição para cada perfil: do usuário doméstico ao administrador de sistemas, do desenvolvedor ao entusiasta de segurança digital.",
+      "Linux no desktop: mitos e realidades",
+      "Por muito tempo, o Linux foi considerado difícil demais para o uso cotidiano. Mas esse cenário mudou bastante. Distribuições modernas como Ubuntu e Linux Mint oferecem interfaces gráficas intuitivas, instalação simplificada e suporte a aplicativos populares como navegadores, editores de texto, planilhas e ferramentas de design.",
+      "A loja de aplicativos, os drivers de hardware e a compatibilidade com periféricos melhoraram muito. Hoje, é possível usar o Linux para trabalhar, estudar, editar fotos e vídeos, jogar — sim, a plataforma Steam tem suporte oficial ao Linux — e muito mais.",
+      "Por que aprender Linux vale a pena?",
+      "Para quem trabalha ou quer trabalhar com tecnologia, conhecer Linux é quase indispensável. A maioria dos servidores e ambientes de desenvolvimento profissional utiliza o sistema. Saber navegar pelo terminal, configurar serviços e entender a estrutura do Linux são habilidades altamente valorizadas no mercado.",
+      "Além disso, o Linux ensina conceitos fundamentais de computação de uma forma prática. Trabalhar com o terminal desenvolve raciocínio lógico, autonomia e uma compreensão mais profunda de como os sistemas funcionam.",
+      "Comunidade e liberdade",
+      "Um dos aspectos mais poderosos do Linux é sua comunidade. Fóruns, wikis, grupos e canais dedicados ao sistema existem em todos os idiomas. Há sempre alguém disposto a ajudar — e a colaboração é um valor central na cultura Linux.",
+      "Mais do que um sistema operacional, o Linux representa uma filosofia: a de que o conhecimento deve ser livre, compartilhado e acessível a todos.",
+      "Conclusão",
+      "O Linux vai muito além da tela preta. É uma tecnologia que move o mundo moderno — e que, ao mesmo tempo, pode ser acessível, funcional e poderosa para qualquer pessoa. Conhecê-lo é dar um passo importante para entender como a tecnologia realmente funciona.",
+    ],
+  },
   {
     id: 22,
     title: "A Semana do Programador",
