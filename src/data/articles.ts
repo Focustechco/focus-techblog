@@ -3,6 +3,7 @@ import java26Img from "../assets/java26.jpg";
 import focusStartImg from "../assets/focus-start.jpg";
 import conlibrasImg from "../assets/conlibras-hero.png";
 import linuxImg from "../assets/linux-tela-preta.jpg";
+import gpt6AstraImg from "../assets/gpt-6-astra.jpg";
 
 export interface Article {
   id: number;
@@ -18,6 +19,37 @@ export interface Article {
 
 
 export const articles: Article[] = [
+  {
+    id: 24,
+    title: "GPT-6 Astra: Um grande salto tecnológico que traz riscos para a cibersegurança",
+    category: "IA",
+    excerpt:
+      "A nova fronteira da inteligência artificial entre o avanço incomparável e os novos desafios digitais.",
+    author: "Maria Eduarda",
+    date: "19 Out 2026",
+    readTime: "5 min",
+    image: gpt6AstraImg,
+    content: [
+      "A inteligência artificial acaba de dar mais um passo importante. A OpenAI apresentou o GPT-6 Astra, seu modelo mais avançado até o momento, com capacidades ampliadas em programação, uso de computadores, ciência e, principalmente, cibersegurança.",
+      "Mas quanto mais poderosa fica uma IA, maior também é a preocupação sobre como essa capacidade pode ser utilizada.",
+      "O que é o GPT-6 Astra?",
+      "O GPT-6 Astra é um modelo de inteligência artificial desenvolvido pela OpenAI para executar tarefas complexas de ponta a ponta. Ele consegue trabalhar com código, navegar na internet, utilizar ferramentas e realizar diferentes etapas de uma tarefa com maior autonomia.",
+      "Um dos pontos que mais chama atenção é sua capacidade em cibersegurança — área responsável por proteger computadores, redes, sistemas e dados contra ataques.",
+      "O avanço na cibersegurança",
+      "Segundo a OpenAI, o Astra foi o primeiro modelo da empresa a atingir o nível \"Crítico\" de capacidade em cibersegurança dentro de seu Preparedness Framework.",
+      "Na prática, isso significa que, com ferramentas e acesso adequados, o modelo pode identificar vulnerabilidades até então desconhecidas e desenvolver formas de explorá-las em sistemas protegidos, sem precisar de orientação humana em cada etapa.",
+      "Essa capacidade possui dois lados. A mesma tecnologia pode ajudar especialistas a encontrar falhas antes que criminosos as descubram, mas também pode reduzir o conhecimento técnico necessário para realizar ataques sofisticados.",
+      "Por que isso preocupa?",
+      "A preocupação não está apenas na capacidade da IA, mas em sua combinação com ferramentas externas e maior autonomia.",
+      "A própria OpenAI afirma ter reforçado mecanismos de segurança para reduzir riscos de uso malicioso ou de comportamentos inesperados do modelo. Entre as medidas estão monitoramento, controles de acesso, isolamento de sistemas e avaliações específicas de segurança.",
+      "O desafio passa a ser encontrar um equilíbrio: permitir que a IA seja usada para fortalecer a segurança digital sem facilitar ataques contra empresas, governos e usuários.",
+      "O que muda na vida do usuário?",
+      "Para estudantes e desenvolvedores, o avanço exige uma atualização constante sobre práticas de desenvolvimento seguro e uso ético de IA. Para empresas e usuários comuns, o impacto é direto na proteção de dados: estratégias tradicionais de defesa cibernética precisarão ser reinventadas para combater ameaças automatizadas por inteligência artificial.",
+      "O futuro da IA também depende da segurança",
+      "O GPT-6 Astra mostra que a evolução da inteligência artificial não está acontecendo apenas na geração de textos ou imagens. Os modelos estão começando a executar tarefas complexas e interagir diretamente com sistemas digitais.",
+      "Esse avanço abre novas possibilidades, mas também exige novas formas de proteção. A corrida pela IA mais poderosa agora acontece lado a lado com outra corrida: a criação de tecnologias capazes de manter esses sistemas seguros.",
+    ],
+  },
   {
     id: 23,
     title: "Linux: muito além da tela preta",
