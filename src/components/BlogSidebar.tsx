@@ -7,6 +7,7 @@ import mariaPhoto from "@/assets/authors/maria.jpg";
 import marceloPhoto from "@/assets/authors/marcelo.jpg";
 import mariaEduardaPhoto from "@/assets/authors/maria-eduarda.png";
 import arthurCairoPhoto from "@/assets/authors/arthur-cairo.jpg";
+import marxPhoto from "@/assets/authors/marx-alexander.jpg";
 
 const trendingTopics = [
   { name: "Inteligência Artificial", count: 24, icon: Sparkles, slug: "inteligencia-artificial" },
@@ -23,6 +24,7 @@ const authors = [
   { name: "Marcelo Rezende", role: "Business leader", photo: marceloPhoto },
   { name: "Maria Eduarda", role: "Dev Full Stack", photo: mariaEduardaPhoto },
   { name: "Arthur Cairo", role: "Especialista em Tecnologia", photo: arthurCairoPhoto },
+  { name: "Marx Alexander", role: "Desenvolvedor Backend", photo: marxPhoto },
 ];
 
 const BlogSidebar = () => {

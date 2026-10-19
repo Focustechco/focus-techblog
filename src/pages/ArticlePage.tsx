@@ -10,6 +10,7 @@ import mariaPhoto from "@/assets/authors/maria.jpg";
 import marceloPhoto from "@/assets/authors/marcelo.jpg";
 import mariaEduardaPhoto from "@/assets/authors/maria-eduarda.png";
 import arthurCairoPhoto from "@/assets/authors/arthur-cairo.jpg";
+import marxPhoto from "@/assets/authors/marx-alexander.jpg";
 
 const authorPhotos: Record<string, string> = {
   "Adriano Leal": adrianoPhoto,
@@ -18,6 +19,7 @@ const authorPhotos: Record<string, string> = {
   "Marcelo Rezende": marceloPhoto,
   "Maria Eduarda": mariaEduardaPhoto,
   "Arthur Cairo": arthurCairoPhoto,
+  "Marx Alexander": marxPhoto,
 };
 
 const ArticlePage = () => {
