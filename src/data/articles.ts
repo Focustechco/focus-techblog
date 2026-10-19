@@ -25,7 +25,7 @@ export const articles: Article[] = [
     category: "IA",
     excerpt:
       "A nova fronteira da inteligência artificial entre o avanço incomparável e os novos desafios digitais.",
-    author: "Maria Eduarda",
+    author: "Marx Alexander",
     date: "19 Out 2026",
     readTime: "5 min",
     image: gpt6AstraImg,
