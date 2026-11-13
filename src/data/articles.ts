@@ -4,6 +4,7 @@ import focusStartImg from "../assets/focus-start.jpg";
 import conlibrasImg from "../assets/conlibras-hero.png";
 import linuxImg from "../assets/linux-tela-preta.jpg";
 import gpt6AstraImg from "../assets/gpt-6-astra.jpg";
+import nextjsImg from "../assets/nextjs-16-4.jpg";
 
 export interface Article {
   id: number;
@@ -19,6 +20,35 @@ export interface Article {
 
 
 export const articles: Article[] = [
+  {
+    id: 25,
+    title: "Next.js 16.4 chega com compilação mais rápida e melhorias no Turbopack",
+    category: "Dev",
+    excerpt:
+      "O Next.js 16.4 apresenta melhorias voltadas ao desempenho e à eficiência no desenvolvimento de aplicações web, trazendo otimizações na compilação, no Turbopack e na integração com o React.",
+    author: "Marcos Ray",
+    date: "13 Nov 2026",
+    readTime: "4 min",
+    image: nextjsImg,
+    content: [
+      "O Next.js 16.4 apresenta melhorias voltadas ao desempenho e à eficiência no desenvolvimento de aplicações web. A atualização traz otimizações na compilação, no Turbopack e na integração com o React.",
+      "O que é o Next.js?",
+      "O Next.js é um framework baseado em React utilizado para criar sites e aplicações web, oferecendo recursos que facilitam o desenvolvimento e a otimização de projetos.",
+      "Principais novidades",
+      "1. Compilação mais eficiente",
+      "A compilação sob demanda permite processar arquivos apenas quando necessário, reduzindo o tempo de espera durante o desenvolvimento.",
+      "2. Melhorias no Turbopack",
+      "O Turbopack recebeu otimizações no armazenamento em cache, reduzindo entre 20% e 25% o espaço utilizado em disco. Também foram implementadas melhorias para gerar arquivos de produção menores.",
+      "3. Integração com React",
+      "A atualização traz avanços na integração com o React, incluindo melhorias nas transições entre páginas e no desenvolvimento de componentes.",
+      "Impacto para os desenvolvedores",
+      "As novidades tornam o desenvolvimento mais eficiente, diminuindo o tempo de espera e facilitando a criação de aplicações modernas.",
+      "Conclusão",
+      "O Next.js 16.4 reforça a evolução do desenvolvimento web, trazendo melhorias de desempenho e ferramentas mais otimizadas.",
+      "Continue acompanhando a Focus TechBlog para ficar por dentro das novidades do mundo da tecnologia.",
+      "Referência: Anúncio oficial do Next.js 16.4 – Next.js Blog.",
+    ],
+  },
   {
     id: 24,
     title: "GPT-6 Astra: Um grande salto tecnológico que traz riscos para a cibersegurança",
